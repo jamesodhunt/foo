@@ -34,7 +34,7 @@ bar
 ```
 
 ```sh-session
-$ some bash commands
+$ some shell session commands
 shell output
 $ foo
 bar
