@@ -1,7 +1,7 @@
 Table of Contents
 =================
 
-   * [What is it ?](#what-is-it)
+   * [What is it?](#what-is-it)
 
 # foo
 foo!
@@ -45,7 +45,7 @@ $ foo
 bar
 ```
 
-# What is it ?
+# What is it?
 
 `virtcontainers` is a Go library that can be used to build hardware-virtualized container
 runtimes.
