@@ -2,6 +2,7 @@ Table of Contents
 =================
 
    * [What is it?](#what-is-it)
+   * [Hello - world](#hello---world)
 
 # foo
 foo!
@@ -49,3 +50,7 @@ bar
 
 `virtcontainers` is a Go library that can be used to build hardware-virtualized container
 runtimes.
+
+# Hello - world
+
+This heading name is stupid.
