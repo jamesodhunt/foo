@@ -7,7 +7,8 @@ Table of Contents
 - Do this:
 
     ``` 
-                                        
+        
+        &amp;
         ```bash
         $ echo "Hi - I am some bash code"
         $ sudo docker run -ti busybox true
