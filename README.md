@@ -4,6 +4,20 @@ Table of Contents
    * [What is it?](#what-is-it)
    * [Hello - world](#hello---world)
 
+- Do this:
+
+    ``` 
+                                        
+        ```bash
+        $ echo "Hi - I am some bash code"
+        $ sudo docker run -ti busybox true
+        $ [ $? -eq 0 ] && echo "success"
+        ```
+                                        
+    ```
+
+
+
 # foo
 foo!
 
