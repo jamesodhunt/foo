@@ -6,7 +6,7 @@ Table of Contents
 
 - Do this:
 
-    ``` 
+  <pre>
         
         &amp;
         ```bash
@@ -15,7 +15,7 @@ Table of Contents
         $ [ $? -eq 0 ] && echo "success"
         ```
                                         
-    ```
+    </pre>
 
 
 
