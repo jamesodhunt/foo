@@ -145,3 +145,7 @@ This is crayzey! :smile:
 Mad enough?
 
 # Silly - heading
+
+# `function_name()`
+
+# under_scores
