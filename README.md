@@ -4,6 +4,14 @@ Table of Contents
    * [What is it?](#what-is-it)
    * [Hello - world](#hello---world)
 
+Foo <div style="color: red">coloured</div> bar.
+
+| col 1 | col 2 | col 3|
+|-|-|-|
+| r1c1 | r1c2 | <div style="color: red">r1c3</div> |
+| r2c1 | r2c2 | r2c3 |
+
+
 - Do this:
 
   <pre>
