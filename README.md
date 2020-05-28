@@ -6,6 +6,9 @@ Table of Contents
 
 Foo <div style="color: red">coloured</div> bar.
 
+
+`#ffffff`
+
 | col 1 | col 2 | col 3|
 |-|-|-|
 | r1c1 | r1c2 | <div style="color: red">r1c3</div> |
