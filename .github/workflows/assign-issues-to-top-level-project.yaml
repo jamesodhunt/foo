@@ -1,0 +1,16 @@
+name: Auto Assign to Project
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  jobs:
+  automate-project-columns:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: alex-page/github-project-automation-plus@v0.2.4
+        with:
+          project: top-level-project
+          column: TODO
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
