@@ -4,6 +4,10 @@ Table of Contents
    * [What is it?](#what-is-it)
    * [Hello - world](#hello---world)
 
+```
+red_circlered=31, green_circlegreen=32, yellow_circleyellow=33, large_blue_circleblue=34, purple_circlepurple=35, dropletcyan=36
+```
+
 ```html
 <style>p{color:red;}</style>
 *foo*
