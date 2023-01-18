@@ -4,6 +4,9 @@ Table of Contents
    * [What is it?](#what-is-it)
    * [Hello - world](#hello---world)
 
+<style>p{color:red;}</style>
+*foo*
+
 <style
   type="text/css">
 h1 {color:red;}
