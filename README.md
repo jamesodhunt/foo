@@ -4,19 +4,20 @@ Table of Contents
    * [What is it?](#what-is-it)
    * [Hello - world](#hello---world)
 
+```html
 <style>p{color:red;}</style>
 *foo*
 
 <style
   type="text/css">
 h1 {color:red;}
-
+  
 p {color:blue;}
 </style>
 <p>okay</p>
 
 Foo <div style="color: red">coloured</div> bar.
-
+```
 
 `#ffffff`
 
