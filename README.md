@@ -1,12 +1,21 @@
 ## Table of Contents
 
-- $\textrm{\color{red}red}$
-- $\textrm{\color{orange}orange}$
-- $\textrm{\color{yellow}yellow}$
-- $\textrm{\color{green}green}$
-- $\textrm{\color{blue}blue}$
-- $\textrm{\color{purple}purple}$
-- $\textrm{\color{white}white}$
+- $\textrm{\color{red}red text}$
+- $\textrm{\color{orange}orange text}$
+- $\textrm{\color{yellow}yellow text}$
+- $\textrm{\color{green}green text}$
+- $\textrm{\color{blue}blue text}$
+- $\textrm{\color{purple}purple text}$
+- $\textrm{\color{white}white text}$ (`<--` white text ;)
+
+- $\colorbox{red}{red box}$
+- $\colorbox{orange}{orange box}$
+- $\colorbox{yellow}{yellow box}$
+- $\colorbox{green}{green box}$
+- $\colorbox{blue}{\color{white}blue box}$
+- $\colorbox{purple}{\color{white}purple box}$
+- $\colorbox{black}{\color{white}black box}$
+- $\colorbox{white}{white box}$
 
    * [What is it?](#what-is-it)
    * [Hello - world](#hello---world)
