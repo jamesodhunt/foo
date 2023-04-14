@@ -1,5 +1,4 @@
-Table of Contents
-=================
+## Table of Contents
 
    * [What is it?](#what-is-it)
    * [Hello - world](#hello---world)
