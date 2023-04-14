@@ -1,5 +1,13 @@
 ## Table of Contents
 
+- $\textrm{\color{red}red}$
+- $\textrm{\color{orange}orange}$
+- $\textrm{\color{yellow}yellow}$
+- $\textrm{\color{green}green}$
+- $\textrm{\color{blue}blue}$
+- $\textrm{\color{purple}purple}$
+- $\textrm{\color{white}white}$
+
    * [What is it?](#what-is-it)
    * [Hello - world](#hello---world)
 
