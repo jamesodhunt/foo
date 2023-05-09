@@ -29,6 +29,8 @@
 ⚪ - white circle
 ⚫ - black circle
 
+This is an example of ~~strike-through~~.
+
 With shell prompt:
 
 ```bash
