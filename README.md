@@ -1,8 +1,16 @@
 ## Table of Contents
 
-> **WARNING:** Watch out!
+> **WARNING:**
+>
+> Watch out!
 
-> **Warning:** Watch out some more.
+> **Warning:**
+>
+> Watch out some more.
+
+> Warning:
+>
+> foo bar.
 
 - $\textrm{\color{red}red text}$
 - $\textrm{\color{orange}orange text}$
