@@ -1,5 +1,9 @@
 ## Table of Contents
 
+> **WARNING:** Watch out!
+
+> **Warning:** Watch out some more.
+
 - $\textrm{\color{red}red text}$
 - $\textrm{\color{orange}orange text}$
 - $\textrm{\color{yellow}yellow text}$
