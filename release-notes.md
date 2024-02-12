@@ -1,5 +1,6 @@
 <details>
 <summary>Click the icon to show the list of commits included in this release</summary>
+<pre>
 fcd005774 tools: avoid rootfs-image build "ln -s" error
 05c4c8055 runtime-rs: Configure argument replacement for QEMU in Makefile
 27cb30d8c runtime-rs: Adjust configuration template for runtime-rs
@@ -613,6 +614,7 @@ f1aec98f9 qemu/virt: use pcie_root_port to do device hotplug for virt
 28a41e1d1 runtime: add a new API for Network interface
 7d7c25c1d runtime-rs: fix a typo in device manager
 2d0518cbe metrics: Add parallel udp iperf3 benchmark
+</pre>
 </details>
 
 
