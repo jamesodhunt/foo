@@ -614,3 +614,26 @@ f1aec98f9 qemu/virt: use pcie_root_port to do device hotplug for virt
 7d7c25c1d runtime-rs: fix a typo in device manager
 2d0518cbe metrics: Add parallel udp iperf3 benchmark
 </details>
+
+
+fcd005774 tools: avoid rootfs-image build "ln -s" error
+05c4c8055 runtime-rs: Configure argument replacement for QEMU in Makefile
+27cb30d8c runtime-rs: Adjust configuration template for runtime-rs
+462afcf82 runtime-rs: Copy configuration for QEMU from runtime
+f139c7dc6 tests: k8s: k8s-copy-file auto-generated policy
+1179306af tests: k8s: additional policy testing utilities
+9a780aa98 genpolicy: improve logging from ExecProcessRequest
+dab567bdf genpolicy: add easy way to allow CloseStdinRequest
+8401adb11 genpolicy: update default values
+ff1ace1c7 docs: Remove jenkins reference in kernel documentation
+97fbf360c gha: Cleanup nydus snapshotter by the daemonset
+43b04fd0c gha: Deploy nydus snapshotter by the daemonset
+0b508f301 tests:k8s: make add_kernel_initrd_anotations function generic
+a43edd0c3 rootfs: Install pause image into rootfs
+42ef6bdca osbuilder:rootfs: support to unpack pause image to rootfs
+53183cba3 workflow: Enable to build pause image in ci
+70a84eca9 packaging: allow to pull and unpack pause image
+3e383674f runtime: fix creation of SEV confidential container on SNP enabled host.
+6346e04cf runtime-rs: fix handling of TTRCP_ADDRESS
+f0256fded runtime-rs: remove validation of shim v2 -address value
+34c47e08b runtime-rs: fix assert error in test in `make check`
