@@ -32,7 +32,7 @@
    * [What is it?](#what-is-it)
    * [Hello - world](#hello---world)
 
-
+- ℹ️ Some information.
 
 🟢 - green circle
 🔴 - red circle
