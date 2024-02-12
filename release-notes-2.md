@@ -1,6 +1,5 @@
 <details>
 <summary>Click the icon to show the list of commits included in this release</summary>
-<pre>
 a1ed5d1 Update release-notes-2.md
 a1ed5d1 Update release-notes-2.md
 5f09882 Create release-notes-2.md
@@ -2279,5 +2278,4 @@ e4c6da1 Update README.md
 e82599e Update README.md
 2c38af1 Update README.md
 24e581f Update README.md
-</pre>
 </details>
