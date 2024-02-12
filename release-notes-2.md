@@ -1,3 +1,20 @@
+## Shortlog
+
+a1ed5d1 Update release-notes-2.md
+a1ed5d1 Update release-notes-2.md
+5f09882 Create release-notes-2.md
+a1ed5d1 Update release-notes-2.md
+5f09882 Create release-notes-2.md
+4c74f11 Update release-notes.md
+a1ed5d1 Update release-notes-2.md
+5f09882 Create release-notes-2.md
+4c74f11 Update release-notes.md
+47b8d18 Update release-notes.md
+a1ed5d1 Update release-notes-2.md
+5f09882 Create release-notes-2.md
+
+## Foo
+
 <details>
 <summary>Click the icon to show the list of commits included in this release</summary>
 a1ed5d1 Update release-notes-2.md
