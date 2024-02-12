@@ -3,10 +3,10 @@
 ## kata-containers Changes
 **FIXME - message this section by hand to produce a summary please**
 ### Shortlog
-236c2c765 tests: cri-o: Update critools version to 1.29
-344e0580c tests: cri-o: Use packages from pkgs.k8s.io
-fcd005774 tools: avoid rootfs-image build "ln -s" error
-05c4c8055 runtime-rs: Configure argument replacement for QEMU in Makefile
+ 236c2c765 tests: cri-o: Update critools version to 1.29
+ 344e0580c tests: cri-o: Use packages from pkgs.k8s.io
+ fcd005774 tools: avoid rootfs-image build "ln -s" error
+ 05c4c8055 runtime-rs: Configure argument replacement for QEMU in Makefile
 27cb30d8c runtime-rs: Adjust configuration template for runtime-rs
 462afcf82 runtime-rs: Copy configuration for QEMU from runtime
 f139c7dc6 tests: k8s: k8s-copy-file auto-generated policy
