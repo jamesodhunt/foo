@@ -1,0 +1,17 @@
+name: Debug GitHub CI environment
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show CI environment
+        run: |
+          cat /proc/cpuinfo|awk 'BEGIN { RS = "" ; } {printf ("%s\n", $0); exit(0);}'
+          sudo apt -y update
+          sudo apt -y install procenv
+          procenv
