@@ -6,7 +6,8 @@ block-beta
   space:3
   space:2 cdh["Confidential Data Hub (CDH)"]
 
-  %% At the time of writ
+  %% At the time of writing, mermaid doesn't support
+  %% double-ended arrows for block diagrams, so fake it ;)
   aa --> cdh
   cdh --> aa
 ```
