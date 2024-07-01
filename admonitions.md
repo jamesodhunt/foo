@@ -1,4 +1,4 @@
-# Adminitions in GFM (GitHub Flavoured Markdown)
+# Admonitions in GFM (GitHub Flavoured Markdown)
 
 > [!Note]
 > This is a very important note.
