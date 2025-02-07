@@ -109,6 +109,7 @@ classDiagram
     evsel --> perf_evsel
     evsel --> evlist
     perf_evsel --> perf_event_attr
+    perf_evsel --> list_head
     perf_evlist --> list_head
     perf_session --> perf_header
     perf_session --> auxtrace
