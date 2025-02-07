@@ -73,6 +73,10 @@ classDiagram
     }
     note for auxtrace "session callbacks to allow AUX area data decoding"
 
+    class auxtrace_record {
+    }
+    note for auxtrace_record "callbacks for recording AUX area data"
+
     class perf_pmu {
       char * : name
       char * : alias_name
@@ -96,4 +100,5 @@ classDiagram
     intel_pt --> auxtrace
     intel_pt_recording --> perf_pmu
     intel_pt_recording --> evlist
+    intel_pt_recording --> auxtrace_record
 ```
