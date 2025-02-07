@@ -26,13 +26,19 @@ classDiagram
     note for perf_event_attr "'.config' encodes the raw PMU event"
 
     class perf_event_attr
-    class list_head
+
+    class list_head {
+      list_head : next
+      list_head : prev
+    }
+    note for list_head "Generic list object added to other objects"
 
     %% -------------------------------------------
     %% Define relationships
 
     evlist --> perf_evlist
     evsel --> perf_evsel
+    evsel --> evlist
     perf_evsel --> perf_event_attr
     perf_evlist --> list_head
 
