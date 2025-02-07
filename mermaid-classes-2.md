@@ -1,5 +1,7 @@
 ```mermaid
-
+---
+title: Simplified, partial perf(1) object summary
+---
 classDiagram
     class evlist {
       perf_evlist : core
