@@ -2,7 +2,7 @@
 
 classDiagram
     class evlist {
-      perf_evlist: core
+      perf_evlist : core
     }
 
     class evsel {
@@ -23,9 +23,8 @@ classDiagram
     class perf_event_attr {
       __u32 : type
       __u32 : size
-      __64 : config
+      __64 config // contains raw MSR event
     }
-    note for perf_event_attr "'.config' encodes the raw PMU event"
 
     class perf_event_attr
 
