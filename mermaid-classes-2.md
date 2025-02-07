@@ -51,10 +51,10 @@ classDiagram
     }
 
     class list_head {
+      <<Generic list object to embed in other objects>>
       list_head : next
       list_head : prev
     }
-    note for list_head "Generic list object added to other objects"
 
     class intel_pt {
       perf_session : session
@@ -82,12 +82,12 @@ classDiagram
     }
 
     class auxtrace {
+      <<session callbacks to allow AUX area data decoding>>
     }
-    note for auxtrace "session callbacks to allow AUX area data decoding"
 
     class auxtrace_record {
+      <<callbacks for recording AUX area data>>
     }
-    note for auxtrace_record "callbacks for recording AUX area data"
 
     class perf_pmu {
       char * : name
@@ -99,8 +99,8 @@ classDiagram
     }
 
     class perf_tool {
+      <<callbacks for the tool (record, report, ...)>>
     }
-    note for perf_tool "Callbacks for the tool in question (perf record, perf report, etc)"
 
     %% -------------------------------------------
     %% Define relationships
