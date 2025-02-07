@@ -86,6 +86,10 @@ classDiagram
       bool : is_uncore
     }
 
+    class perf_tool {
+    }
+    note for perf_tool "Callbacks for the tool in question (perf record, perf report, etc)"
+
     %% -------------------------------------------
     %% Define relationships
 
@@ -95,7 +99,9 @@ classDiagram
     perf_evsel --> perf_event_attr
     perf_evlist --> list_head
     perf_session --> perf_header
+    perf_session --> auxtrace
     perf_session --> evlist
+    perf_session --> perf_tool
     perf_header --> perf_env
     intel_pt --> perf_session
     intel_pt --> auxtrace
