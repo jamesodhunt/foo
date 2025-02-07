@@ -108,6 +108,7 @@ classDiagram
     evlist --> perf_evlist
     evsel --> perf_evsel
     evsel --> evlist
+    evlist --> evsel
     perf_evsel --> perf_event_attr
     perf_evsel --> list_head
     perf_evlist --> list_head
