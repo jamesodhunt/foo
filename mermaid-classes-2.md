@@ -95,6 +95,7 @@ classDiagram
     perf_evsel --> perf_event_attr
     perf_evlist --> list_head
     perf_session --> perf_header
+    perf_session --> evlist
     perf_header --> perf_env
     intel_pt --> perf_session
     intel_pt --> auxtrace
