@@ -58,6 +58,24 @@ classDiagram
     }
     note for list_head "Generic list object added to other objects"
 
+    class intel_pt {
+      perf_session : session
+      auxtrace : auxtrace      
+    }
+
+    class auxtrace {
+    }
+    note for auxtrace "session callbacks to allow AUX area data decoding"
+
+    class perf_pmu {
+      char * : name
+      char * : alias_name
+      char * : id
+      __u32 : type
+      bool : is_core
+      bool : is_uncore
+    }
+
     %% -------------------------------------------
     %% Define relationships
 
@@ -68,5 +86,6 @@ classDiagram
     perf_evlist --> list_head
     perf_session --> perf_header
     perf_header --> perf_env
-
+    intel_pt --> perf_session
+    intel_pt --> auxtrace
 ```
