@@ -1,3 +1,5 @@
+
+
 ```mermaid
 classDiagram
     class evlist {
@@ -15,6 +17,7 @@ classDiagram
     }
 
     class perf_evsel {
+      list_head : node
       perf_event_attr : attr
     }
 
