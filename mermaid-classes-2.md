@@ -1,6 +1,5 @@
-
-
 ```mermaid
+
 classDiagram
     class evlist {
       perf_evlist: core
