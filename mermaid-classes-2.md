@@ -69,6 +69,15 @@ classDiagram
       evlist : evlist
     }
 
+    class hists {
+      u64 : nr_entries
+      hists_stats : stats
+    }
+
+    class hists_stats {
+      u32 : nr_samples
+    }
+
     class auxtrace {
     }
     note for auxtrace "session callbacks to allow AUX area data decoding"
@@ -108,4 +117,5 @@ classDiagram
     intel_pt_recording --> perf_pmu
     intel_pt_recording --> evlist
     intel_pt_recording --> auxtrace_record
+    hists --> hists_stats
 ```
