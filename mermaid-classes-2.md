@@ -63,6 +63,12 @@ classDiagram
       auxtrace : auxtrace      
     }
 
+    class intel_pt_recording {
+      auxtrace_record : itr
+      perf_pmu : intel_pt_pmu
+      evlist : evlist
+    }
+
     class auxtrace {
     }
     note for auxtrace "session callbacks to allow AUX area data decoding"
@@ -88,4 +94,6 @@ classDiagram
     perf_header --> perf_env
     intel_pt --> perf_session
     intel_pt --> auxtrace
+    intel_pt_recording --> perf_pmu
+    intel_pt_recording --> evlist
 ```
