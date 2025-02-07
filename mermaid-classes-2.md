@@ -1,13 +1,17 @@
 ```mermaid
 classDiagram
     class evlist {
-      +perf_evlist: core
+      perf_evlist: core
     }
 
-    class evsel
+    class evsel {
+      perf_evsel : core
+      evlist : evlist
+    }
+
     class perf_evlist {
-      +list_head : entries
-      +int : nr_entries
+      list_head : entries
+      int : nr_entries
     }
 
     class perf_evsel {
@@ -24,6 +28,12 @@ classDiagram
     class perf_event_attr
     class list_head
 
+    %% -------------------------------------------
+    %% Define relationships
+
     evlist --> perf_evlist
+    evsel --> perf_evsel
+    perf_evsel --> perf_event_attr
     perf_evlist --> list_head
+
 ```
