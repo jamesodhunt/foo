@@ -30,6 +30,28 @@ classDiagram
 
     class perf_event_attr
 
+    class perf_session {
+      perf_header : header
+      evlist : evlist
+    }
+
+    class perf_header {
+      perf_header_version : version
+      u64 : data_offset
+      u64 : data_size
+      u64 : feat_offset
+      perf_env : env
+    }
+
+    class perf_env {
+      char * : hostname
+      char * : os_version
+      char * : version
+      char * : arch
+      int : nr_cpus_online
+      int : nr_cpus_avail      
+    }
+
     class list_head {
       list_head : next
       list_head : prev
@@ -44,5 +66,7 @@ classDiagram
     evsel --> evlist
     perf_evsel --> perf_event_attr
     perf_evlist --> list_head
+    perf_session --> perf_header
+    perf_header --> perf_env
 
 ```
