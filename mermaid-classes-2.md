@@ -69,6 +69,11 @@ classDiagram
       evlist : evlist
     }
 
+    class hists_evsel {
+      evsel : evsel
+      hists : hists
+    }
+
     class hists {
       u64 : nr_entries
       hists_stats : stats
@@ -118,4 +123,6 @@ classDiagram
     intel_pt_recording --> evlist
     intel_pt_recording --> auxtrace_record
     hists --> hists_stats
+    hists_evsel --> evsel
+    hists_evsel --> hists
 ```
