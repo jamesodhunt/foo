@@ -104,6 +104,27 @@ classDiagram
       <<callbacks for the tool (record, report, ...)>>
     }
 
+    class rb_list {
+      << includes cmp, new and delete function pointers >>
+      rb_root_cached : entries
+      int : nr_entries
+    }
+
+    class rb_node {
+      unsigned long : __rb_parent_color
+      rb_node : rb_left
+      rb_node : rb_right
+    }
+
+    class rb_root {
+      rb_node : rb_node
+    }
+
+    class rb_root_cached {
+      rb_root : rb_root
+      rb_node : rb_leftmost 
+    }
+
     %% -------------------------------------------
     %% Define relationships
 
@@ -127,4 +148,11 @@ classDiagram
     hists --> hists_stats
     hists_evsel --> evsel
     hists_evsel --> hists
+
+    rb_node --> rb_node
+    rb_root --> rb_node
+    rb_root_cached --> rb_root
+    rb_root_cached --> rb_node
+    rb_list --> rb_root_cached
+
 ```
