@@ -75,6 +75,7 @@ classDiagram
     }
 
     class hists {
+      rb_root_cached : entries
       u64 : nr_entries
       hists_stats : stats
     }
