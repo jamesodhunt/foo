@@ -63,6 +63,27 @@ classDiagram
       auxtrace : auxtrace      
     }
 
+    class intel_pt_queue {
+      intel_pt : pt
+      intel_pt_state : state
+      auxtrace_buffer : buffer
+      perf_event : event
+      char[]: insn
+    }
+
+    class intel_pt_buffer {
+      const char * : buf
+      size_t : len
+      
+    }
+
+    class auxtrace_buffer {
+      list_head : list
+      size_t : size
+      void * : data
+
+    }
+
     class intel_pt_recording {
       auxtrace_record : itr
       perf_pmu : intel_pt_pmu
