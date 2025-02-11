@@ -69,6 +69,11 @@ classDiagram
       u64 : size
     }
 
+    class perf_file_attr {
+      perf_event_attr : attr
+      perf_file_section : ids
+    }
+
     class perf_env {
       char * : hostname
       char * : os_version
@@ -207,10 +212,14 @@ classDiagram
 
     list_head --> list_head
 
+
     perf_evsel --> list_head
     perf_evsel --> perf_event_attr
 
     perf_evlist --> list_head
+
+    perf_file_attr --> perf_event_attr
+    perf_file_attr --> perf_file_section
 
     perf_file_header --> perf_file_section
 
