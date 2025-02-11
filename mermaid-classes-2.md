@@ -55,6 +55,15 @@ classDiagram
       perf_env : env
     }
 
+    class feat_fd {
+      perf_header : ph
+      int : fd
+      void * : buf
+      ssize_t : offset
+      size_t : size
+      evsel : events
+    }
+
     class perf_file_header {
       u64 : magic
       u64 : size
@@ -191,6 +200,9 @@ classDiagram
 
     evsel --> perf_evsel
     evsel --> evlist
+
+    feat_fd --> perf_header
+    feat_fd --> evsel
 
     hists --> hists_stats
     hists --> rb_root_cached
