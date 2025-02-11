@@ -121,6 +121,8 @@ classDiagram
 
     class auxtrace_record {
       <<callbacks for recording AUX area data>>
+
+      evlist : evlist
     }
 
     class perf_pmu {
@@ -162,6 +164,8 @@ classDiagram
 
     auxtrace_buffer --> list_head
     
+    auxtrace_record --> evlist
+
     evlist --> perf_evlist
     evlist --> evsel
     evlist --> events_stats
