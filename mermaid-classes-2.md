@@ -55,6 +55,20 @@ classDiagram
       perf_env : env
     }
 
+    class perf_file_header {
+      u64 : magic
+      u64 : size
+      u64 : attr_size
+      perf_file_section : attrs
+      perf_file_section : data
+      perf_file_section : event_types
+    }
+
+    class perf_file_section {
+      u64 : offset
+      u64 : size
+    }
+
     class perf_env {
       char * : hostname
       char * : os_version
@@ -197,6 +211,8 @@ classDiagram
     perf_evsel --> perf_event_attr
 
     perf_evlist --> list_head
+
+    perf_file_header --> perf_file_section
 
     perf_header --> perf_env
 
