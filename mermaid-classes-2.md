@@ -5,6 +5,18 @@ title: Simplified, partial perf(1) object summary
 classDiagram
     class evlist {
       perf_evlist : core
+      evsel : selected
+      events_stats : stats
+      perf_env : env
+    }
+
+    class events_stats {
+      u64 : total_lost
+      u64 : total_lost_samples
+      u64 : total_dropped_samples
+      u64 : total_aux_lost
+      u32[] : nr_events
+      u64 : total_aux_lost
     }
 
     class evsel {
@@ -28,11 +40,11 @@ classDiagram
       __64 config // contains raw MSR event
     }
 
-    class perf_event_attr
-
     class perf_session {
       perf_header : header
       evlist : evlist
+      auxtrace : auxtrace
+      perf_tool : tool
     }
 
     class perf_header {
@@ -74,14 +86,12 @@ classDiagram
     class intel_pt_buffer {
       const char * : buf
       size_t : len
-      
     }
 
     class auxtrace_buffer {
       list_head : list
       size_t : size
       void * : data
-
     }
 
     class intel_pt_recording {
@@ -150,26 +160,46 @@ classDiagram
     %% -------------------------------------------
     %% Define relationships
 
+    auxtrace_buffer --> list_head
+    
     evlist --> perf_evlist
+    evlist --> evsel
+    evlist --> events_stats
+
     evsel --> perf_evsel
     evsel --> evlist
-    evlist --> evsel
-    perf_evsel --> perf_event_attr
+
+    hists --> hists_stats
+    hists --> rb_root_cached
+
+    hists_evsel --> evsel
+    hists_evsel --> hists
+
+    intel_pt --> perf_session
+    intel_pt --> auxtrace
+
+    intel_pt_queue --> intel_pt
+    intel_pt_queue --> intel_pt_state
+    intel_pt_queue --> auxtrace_buffer
+    intel_pt_queue --> perf_event
+
+    intel_pt_recording --> perf_pmu
+    intel_pt_recording --> evlist
+    intel_pt_recording --> auxtrace_record
+
+    list_head --> list_head
+
     perf_evsel --> list_head
+    perf_evsel --> perf_event_attr
+
     perf_evlist --> list_head
+
+    perf_header --> perf_env
+
     perf_session --> perf_header
     perf_session --> auxtrace
     perf_session --> evlist
     perf_session --> perf_tool
-    perf_header --> perf_env
-    intel_pt --> perf_session
-    intel_pt --> auxtrace
-    intel_pt_recording --> perf_pmu
-    intel_pt_recording --> evlist
-    intel_pt_recording --> auxtrace_record
-    hists --> hists_stats
-    hists_evsel --> evsel
-    hists_evsel --> hists
 
     rb_node --> rb_node
     rb_root --> rb_node
