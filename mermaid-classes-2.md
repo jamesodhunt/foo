@@ -111,6 +111,30 @@ classDiagram
       char[]: insn
     }
 
+    class perf_event_header {
+      __u32 : type
+      __u16 : misc
+      __u16 : size
+    }
+
+    class perf_record_auxtrace {
+       perf_event_header : header
+       __u64 : size
+       __u64 : offset
+    }
+
+    class perf_record_sample {
+       perf_event_header : header
+       __u64[] : array
+    }
+
+    class perf_event {
+      << union >>
+       perf_event_header : header
+
+      
+    }
+
     class intel_pt_buffer {
       const char * : buf
       size_t : len
@@ -224,6 +248,9 @@ classDiagram
 
     list_head --> list_head
 
+    perf_event --> perf_event_header
+    perf_event --> perf_record_auxtrace
+    perf_event --> perf_record_sample
 
     perf_evsel --> list_head
     perf_evsel --> perf_event_attr
@@ -236,6 +263,9 @@ classDiagram
     perf_file_header --> perf_file_section
 
     perf_header --> perf_env
+
+    perf_record_auxtrace --> perf_event_header
+    perf_record_sample --> perf_event_header
 
     perf_session --> perf_header
     perf_session --> auxtrace
