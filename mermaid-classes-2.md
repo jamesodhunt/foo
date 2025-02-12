@@ -257,9 +257,43 @@ classDiagram
      annotated_branch : branch
    }
 
+    class map_symbol {
+      struct maps : maps
+      struct map : map
+      struct symbol : sym
+    }
+
+    class map {
+      u64 : start
+      u64 : end
+      u64 : pgoff
+      u64 : reloc
+      dso : dso
+    }
+
+    class dso {
+      dsos : dsos
+      rb_root_cached : symbols
+      symbol : symbol_names
+      size_t : symbol_names_len
+      rb_root_cached : inlined_nodes
+      rb_root_cached : srclines
+      rb_root : data_types
+      rb_root : global_vars
+      char[]: name
+    }
+
+    class addr_map_symbol {
+       map_symbol : ms
+       u64 : addr
+       u64 : phys_addr
+    }
+
     %% -------------------------------------------
     %% Define relationships
 
+    addr_map_symbol --> map_symbol
+    
     annotation --> annotated_source
     annotation --> annotated_branch
 
@@ -272,6 +306,10 @@ classDiagram
     auxtrace_buffer --> list_head
     
     auxtrace_record --> evlist
+
+    dso --> dsos
+    dso --> rb_root_cached
+    dso --> symbol
 
     evlist --> perf_evlist
     evlist --> evsel
@@ -302,6 +340,10 @@ classDiagram
     intel_pt_recording --> auxtrace_record
 
     list_head --> list_head
+
+    map_symbol --> maps
+    map_symbol --> map
+    map_symbol --> symbol
 
     perf_event --> perf_event_header
     perf_event --> perf_record_auxtrace
