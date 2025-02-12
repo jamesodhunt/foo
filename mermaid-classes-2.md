@@ -130,7 +130,19 @@ classDiagram
 
     class perf_event {
       << union >>
-       perf_event_header : header
+      perf_event_header : header
+      perf_record_auxtrace : auxtrace 
+      perf_record_mmap : mmap
+      perf_record_sample : sample
+    }
+
+    class perf_record_mmap {
+      perf_event_header : header
+      __u32 : pid
+      __u32 : tid
+      __u64 : start
+      __u64 : len
+      
 
       
     }
@@ -250,6 +262,7 @@ classDiagram
 
     perf_event --> perf_event_header
     perf_event --> perf_record_auxtrace
+    perf_event --> perf_record_mmap
     perf_event --> perf_record_sample
 
     perf_evsel --> list_head
@@ -265,6 +278,7 @@ classDiagram
     perf_header --> perf_env
 
     perf_record_auxtrace --> perf_event_header
+    perf_record_mmap --> perf_event_header
     perf_record_sample --> perf_event_header
 
     perf_session --> perf_header
