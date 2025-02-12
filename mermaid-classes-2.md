@@ -142,9 +142,6 @@ classDiagram
       __u32 : tid
       __u64 : start
       __u64 : len
-      
-
-      
     }
 
     class intel_pt_buffer {
@@ -223,8 +220,54 @@ classDiagram
       rb_node : rb_leftmost 
     }
 
+    class symbol {
+      rb_node : rb_node
+      u64 : start
+      u64 : end
+      u16 : namelen
+      u8 : type
+      char[] : name
+   }
+
+   class annotated_source {
+     list_head : source
+     sym_hist : histograms
+     hashmap : samples
+     int : nr_histograms
+     int : nr_events
+     int : nr_asm_entries
+     u64 : start
+   }
+
+   class annotated_branch {
+     u64 : hit_cycles
+     u64 : hit_insn
+     unsigned int : total_insn
+     cyc_hist : cycles_hist
+   }
+
+   class cyc_hist {
+     u64 : start
+     u64 : cycles
+     u32 : num
+   }
+
+   class annotation {
+     annotated_source : src
+     annotated_branch : branch
+   }
+
     %% -------------------------------------------
     %% Define relationships
+
+    annotation --> annotated_source
+    annotation --> annotated_branch
+
+    annotated_source --> list_head
+    annotated_source --> sym_hist
+    annotated_source --> hashmap
+
+    annotated_branch --> cyc_hist
 
     auxtrace_buffer --> list_head
     
@@ -291,5 +334,7 @@ classDiagram
     rb_root_cached --> rb_root
     rb_root_cached --> rb_node
     rb_list --> rb_root_cached
+
+    symbol --> rb_node
 
 ```
