@@ -1,3 +1,9 @@
+# A mermaid diagram
+
+## A section
+
+Foo bar baz.
+
 ```mermaid
 ---
 title: Simplified, partial perf(1) object summary
@@ -422,3 +428,7 @@ classDiagram
     symbol --> rb_node
 
 ```
+
+## Another section
+
+The end.
