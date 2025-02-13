@@ -32,6 +32,23 @@ classDiagram
      annotated_branch : branch
    }
 
+   class annotation_data {
+     double[] : percent
+     double : percent_sum
+     sym_hist_entry : he
+   }
+
+   class annotation_line {
+     list_head : node
+     rb_node : rb_node
+     s64 : offset
+     char * : line
+     int : line_nr
+     cycles_info : cycles
+     evsel : evsel
+     annotation_data[] : data
+   }
+
     class auxtrace {
       <<session callbacks to allow AUX area data decoding>>
     }
@@ -46,6 +63,13 @@ classDiagram
       <<callbacks for recording AUX area data>>
 
       evlist : evlist
+    }
+
+    class cycles_info {
+      float : ipc
+      u64 : avg
+      u64 : max
+      u64 : min
     }
 
     class cyc_hist {
@@ -281,6 +305,16 @@ classDiagram
       rb_node : rb_leftmost 
     }
 
+    class sym_hist {
+      u64 : nr_samples
+      u64 : period
+    }
+
+    class sym_hist_entry {
+      u64 : nr_samples
+      u64 : period
+    }
+
     class symbol {
       rb_node : rb_node
       u64 : start
@@ -297,6 +331,13 @@ classDiagram
     
     annotation --> annotated_source
     annotation --> annotated_branch
+
+    annotation_data --> sym_hist_entry
+
+    annotation_line --> list_head
+    annotation_line --> rb_node
+    annotation_line --> cycles_info
+    annotation_line --> annotation_data
 
     annotated_source --> list_head
     annotated_source --> sym_hist
